@@ -8,11 +8,11 @@
     mc:Ignorable="d">
 
     <Page.TopAppBar>
-        <AppBar Margin="0,0,0,0" IsOpen="True" IsSticky="True" Background="Teal" Foreground="White" >
+        <AppBar Margin="0,0,0,0" IsOpen="True" IsSticky="True" Background="#6a1b9a" Foreground="White" >
             <RelativePanel >
                 <AppBarButton x:Name="DonateTab" RelativePanel.AlignLeftWithPanel="True" Width="150" Icon="Emoji2" Label="Donate" Foreground="White" Tapped="GoToDonate"/>
-                <AppBarButton x:Name="Total" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="150" Icon="World" Label="Hystory" Foreground="White" Tapped="GoToDashboard"/>
-                <AppBarButton x:Name="History" RelativePanel.AlignRightWithPanel="True" Icon="Globe" Width="150" Label="Dashboard" Foreground="White" Tapped="GoToHistory" />
+                <AppBarButton x:Name="History" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="150" Icon="World" Label="Hystory" Foreground="White" Tapped="GoToHistory"/>
+                <AppBarButton x:Name="Dashboard" RelativePanel.AlignRightWithPanel="True" Icon="Globe" Width="150" Label="Dashboard" Foreground="White" Tapped="GoToDashboard" />
             </RelativePanel>
         </AppBar>
     </Page.TopAppBar>
@@ -22,7 +22,7 @@
     </Grid>
     
     <Page.BottomAppBar >
-        <AppBar Margin="0,0,0,0" IsOpen="False" IsSticky="True" Background="Teal" Foreground="White" >
+        <AppBar Margin="0,0,0,0" IsOpen="False" IsSticky="True" Background="#6a1b9a" Foreground="White" >
             <StackPanel Orientation="Horizontal">
                 <AppBarButton Icon="Help" Label="About" Foreground="White"/>
                 <AppBarButton Icon="Emoji2" Label="Feedback" Foreground="White"/>

@@ -25,6 +25,7 @@ namespace MX2T_Project
         public DashboardPage()
         {
             this.InitializeComponent();
+            WebView1.Navigate(new Uri("http://coderthemes.com/ubold_2.2/light/index.html"));
         }
     }
 }
