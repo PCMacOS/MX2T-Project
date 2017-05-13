@@ -7,43 +7,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,0" IsOpen="True" IsSticky="True" Background="Teal" Foreground="White" >
+            <RelativePanel >
+                <AppBarButton x:Name="DonateTab" RelativePanel.AlignLeftWithPanel="True" Width="150" Icon="Emoji2" Label="Donate" Foreground="White" Tapped="GoToDonate"/>
+                <AppBarButton x:Name="Total" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="150" Icon="World" Label="Hystory" Foreground="White" Tapped="GoToDashboard"/>
+                <AppBarButton x:Name="History" RelativePanel.AlignRightWithPanel="True" Icon="Globe" Width="150" Label="Dashboard" Foreground="White" Tapped="GoToHistory" />
+            </RelativePanel>
+        </AppBar>
+    </Page.TopAppBar>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot Grid.Row="1">
-            <PivotItem Header="Donate">
-                <RelativePanel>
-                    <Image x:Name="Donate" Source="Images/donate-button.png" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" MaxHeight="100" Tapped="QR_Search_Tapped"></Image>
-                </RelativePanel>
-            </PivotItem>
-
-            <PivotItem Header="Keyboard Support">
-                <TextBlock>
-                    <Run>Pivot now supports the following keyboard behaviors</Run><LineBreak/>
-                    <Run> * While the HeaderPanel is focused:</Run><LineBreak/>
-                    <Run> * * Left, Right, Ctrl+PgUp, Ctrl+PgDown: Changes the currently selected PivotItem</Run><LineBreak/>
-                    <Run> * * Down: Sets focus in the content area</Run><LineBreak/>
-                    <Run> * While the Content area is focused:</Run><LineBreak/>
-                    <Run> * * Ctrl+PgUp, Ctrl+PgDown: Changes the currently selected PivotItem</Run>
-                </TextBlock>
-            </PivotItem>
-
-            <PivotItem Header="Header Behaviors">
-                <StackPanel>
-                    <TextBlock>To provide a great experience from mobile to desktop, Pivot now supports two header styles, Dynamic Headers and Static Headers.<LineBreak/></TextBlock>
-                    <TextBlock Style="{StaticResource SubheaderTextBlockStyle}">Dynamic Headers</TextBlock>
-                    <TextBlock>
-                        <Run>With a focus on mobile and small screen, dynamic headers automatically revolve in the header area with the currently selected PivotItem always the first item.</Run><LineBreak/>
-                        <Run>Dynamic headers are automatically enabled when the combined width of your PivotItem.Header elements exceeds the width availabe to the Pivot control.</Run><LineBreak/>
-                    </TextBlock>
-                    <Image Source="/Assets/DynamicHeader.png" Width="350" Stretch="Uniform" HorizontalAlignment="Left" />
-
-                    <TextBlock Style="{StaticResource SubheaderTextBlockStyle}">Static Headers</TextBlock>
-                    <TextBlock>
-                        <Run>Targeting devices with larger displays, static headers keep a fixed position in the header area, regardless of which item is currently selected.</Run><LineBreak/>
-                        <Run>Static headers are automatically enabled when the combined width of your PivotItem.Header elements fits within the width available to the Pivot control</Run><LineBreak/>
-                    </TextBlock>
-                    <Image Source="/Assets/StaticHeader.png" Width="350" Stretch="Uniform" HorizontalAlignment="Left" />
-                </StackPanel>
-            </PivotItem>
-        </Pivot>
+        <Frame Name="MyFrame"></Frame>
     </Grid>
+    
+    <Page.BottomAppBar >
+        <AppBar Margin="0,0,0,0" IsOpen="False" IsSticky="True" Background="Teal" Foreground="White" >
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Help" Label="About" Foreground="White"/>
+                <AppBarButton Icon="Emoji2" Label="Feedback" Foreground="White"/>
+                <AppBarButton Icon="Favorite" Label="Rate" Foreground="White" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
 </Page>
