@@ -25,7 +25,7 @@ namespace MX2T_Project
         public DashboardPage()
         {
             this.InitializeComponent();
-            WebView1.Navigate(new Uri("http://citizen.azurewebsites.net/index.html"));
+            WebView1.Navigate(new Uri("http://citizens.azurewebsites.net"));
         }
     }
 }
