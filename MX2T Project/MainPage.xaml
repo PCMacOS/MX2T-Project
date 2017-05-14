@@ -8,10 +8,10 @@
     mc:Ignorable="d">
 
     <Page.TopAppBar>
-        <AppBar Margin="0,0,0,0" IsOpen="True" IsSticky="True" Background="#6a1b9a" Foreground="White" >
+        <AppBar Margin="0,0,0,10" IsOpen="True" IsSticky="True" Background="#6a1b9a" Foreground="White" >
             <RelativePanel >
                 <AppBarButton x:Name="DonateTab" RelativePanel.AlignLeftWithPanel="True" Width="150" Icon="Emoji2" Label="Donate" Foreground="White" Tapped="GoToDonate"/>
-                <AppBarButton x:Name="History" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="150" Icon="World" Label="Hystory" Foreground="White" Tapped="GoToHistory"/>
+                <AppBarButton x:Name="History" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="150" Icon="World" Label="History" Foreground="White" Tapped="GoToHistory"/>
                 <AppBarButton x:Name="Dashboard" RelativePanel.AlignRightWithPanel="True" Icon="Globe" Width="150" Label="Dashboard" Foreground="White" Tapped="GoToDashboard" />
             </RelativePanel>
         </AppBar>

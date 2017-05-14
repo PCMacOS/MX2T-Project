@@ -8,6 +8,17 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <RelativePanel x:Name="HistoryNo" Visibility="Visible">
+            <Image x:Name="HistoryDonateNo" Source="Images/HistoryNo.png" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" MaxHeight="100" Margin="0,-100,0,10"></Image>
+            <TextBlock x:Name="Text" MaxWidth="240" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="HistoryDonateNo" FontFamily="Roboto" FontSize="30" TextWrapping="Wrap" Text="You haven't made any donations yet"  Margin="0,30,0,10" Foreground="#FF404040"/>
+            <Button x:Name="MakeDonation" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="Text" Height="50" Width="235.64"  Margin="0,20,0,10" Tapped="MakeDonation_Tapped">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="Images/MakeDonation.png"/>
+                </Button.Background>
+            </Button>
+        </RelativePanel>
+        <RelativePanel  x:Name="HistoryYes" Visibility="Collapsed">
+            <Image x:Name="HistoryDonateYes" Stretch="Fill" Height="Auto" Source="Images/HistoryYes.png" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWithPanel="True" MaxHeight="100" Margin="0,80,0,0"></Image>
+        </RelativePanel>
     </Grid>
 </Page>

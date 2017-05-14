@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MX2T_Project
@@ -25,6 +24,18 @@ namespace MX2T_Project
         public HistoryPage()
         {
             this.InitializeComponent();
+            
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (Data.History) { HistoryNo.Visibility = Visibility.Collapsed; HistoryYes.Visibility = Visibility.Visible; }
+            if (Data.moneypick != 0) Data.moneypick = 0;
+        }
+
+        private void MakeDonation_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(DonatePage));
         }
     }
 }

@@ -34,7 +34,8 @@ namespace MX2T_Project
         {
             base.OnNavigatedTo(e);
             SetTitleBarBackground();
-            MyFrame.Navigate(typeof(DonatePage));
+            if (Data.moneypick!=0) MyFrame.Navigate(typeof(HistoryPage));
+            else MyFrame.Navigate(typeof(DonatePage));
 
         }
   
@@ -45,11 +46,11 @@ namespace MX2T_Project
             var titleBar = ApplicationView.GetForCurrentView().TitleBar;
 
             // Set the color of the Title Bar content
-            titleBar.BackgroundColor = Colors.Teal;
+            titleBar.BackgroundColor = Color.FromArgb(1,74,20,140);
             titleBar.ForegroundColor = Colors.White;
 
             // Set the color of the Title Bar buttons
-            titleBar.ButtonBackgroundColor = Colors.Teal;
+            titleBar.ButtonBackgroundColor = Color.FromArgb(1, 74, 20, 140);
             titleBar.ButtonForegroundColor = Colors.White;
         }
 
